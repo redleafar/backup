@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title> Index </title>
+</head>
+<body>
+    <h4> Palabras del dataset con su frecuencia: </h4>
+	<table>
+		<tr>
+            <td>
+                {%for key, value in frequency.items() %}
+                    <h4> {{ key }} </h4>
+                {%endfor%}
+			</td>
+            <td>
+                {%for key, value in frequency.items() %}
+                    <h4> {{ value }} </h4>
+                {%endfor%}
+            </td>
+		</tr>
+	</table>
+</body>
+</html>

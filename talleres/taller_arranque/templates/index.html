@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Upload File</title>
+</head>
+<body>
+    <h3>a) Desarrolle una aplicación Web que le permita ejecutar el primero de los retos por iniciativa de un usuario,
+desde un navegador Web. Permita que el usuario indique el nombre del archivo de trabajo.</h3>
+    <form action="{{ url_for('reto2') }}" method="GET" enctype="multipart/form-data">
+        <input type="text" name="filename">
+        <input type="submit" value="Enviar">
+    </form>
+    <br/>
+    <br/>
+    <h3>b) Modifique la aplicación Web para que, ahora, se muestren los nombres de los archivos disponibles para el ejercicio
+y el usuario escriba el nombre de aquel con el que quiere trabajar el mismo reto anterior.</h3>
+    <form action="{{ url_for('reto2') }}" method="GET" enctype="multipart/form-data">
+        <label>Archivos disponibles:</label>
+        <h3>reut2-000.sgm</h3>
+        <h3>reut2-001.sgm</h3>
+        <h3>reut2-002.sgm</h3>
+        <h3>reut2-003.sgm</h3>
+        <input type="text" name="filename" placeholder="Escribe el nombre del archivo...">
+        <input type="submit" value="Enviar">
+    </form>
+    <br/>
+    <br/>
+    <h3>c) Modifique la aplicación Web para que, ahora, se muestren los nombres de los archivos disponibles para el ejercicio
+y el usuario seleccione aquel con el que quiere trabajar el mismo reto anterior.</h3>
+    <h3>d) Modifique la aplicación Web para que ahora el resultado del reto se muestre en la aplicación Web.</h3>
+    <form action="{{ url_for('reto2') }}" method="GET" enctype="multipart/form-data">
+        <label for="filesForC">Selecciona un archivo:</label>
+        <select id="filesForC" name="filename">
+          <option value="reut2-000.sgm">reut2-000.sgm</option>
+          <option value="reut2-001.sgm">reut2-001.sgm</option>
+          <option value="reut2-002.sgm">reut2-002.sgm</option>
+          <option value="reut2-003.sgm">reut2-003.sgm</option>
+        </select>
+        <input type="submit" value="Enviar">
+    </form>
+    <br/>
+    <br/>
+<h3>e) Complete la aplicación para que ahora se pueda ejecutar cualquiera de los retos, tomando los parámetros de
+ejecución y mostrando los resultados en la aplicación Web.</h3>
+    <h3>Reto para fecuencia de cada palabra en un archivo (retos b y c)</h3>
+    <form action="{{ url_for('reto4') }}" method="GET" enctype="multipart/form-data">
+        <label for="filesForE">Selecciona un archivo:</label>
+        <select id="filesForE" name="filename">
+          <option value="reut2-000.sgm">reut2-000.sgm</option>
+          <option value="reut2-001.sgm">reut2-001.sgm</option>
+          <option value="reut2-002.sgm">reut2-002.sgm</option>
+          <option value="reut2-003.sgm">reut2-003.sgm</option>
+        </select>
+        <input type="number" name="number" placeholder="Top de palabras a buscar...">
+        <input type="submit" value="Enviar">
+    </form>
+    <br/>
+    <h3>Reto para número de palabras en 2 archivos (retos punto e)</h3>
+    <form action="{{ url_for('reto5_4') }}" method="GET" enctype="multipart/form-data">
+        <label for="filesForE21">Selecciona los archivos:</label>
+        <select id="filesForE21" name="filename1">
+          <option value="reut2-000.sgm">reut2-000.sgm</option>
+          <option value="reut2-001.sgm">reut2-001.sgm</option>
+          <option value="reut2-002.sgm">reut2-002.sgm</option>
+          <option value="reut2-003.sgm">reut2-003.sgm</option>
+        </select>
+        <select id="filesForE22" name="filename2">
+          <option value="reut2-000.sgm">reut2-000.sgm</option>
+          <option value="reut2-001.sgm">reut2-001.sgm</option>
+          <option value="reut2-002.sgm">reut2-002.sgm</option>
+          <option value="reut2-003.sgm">reut2-003.sgm</option>
+        </select>
+        <input type="number" name="number1" placeholder="Top de palabras a buscar en el archivo 1...">
+        <input type="number" name="number2" placeholder="Top de palabras a buscar en el archivo 2...">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

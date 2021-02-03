@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title> Index </title>
+</head>
+<body>
+    <h4> Palabras del dataset 1 con su frecuencia: </h4>
+	<table>
+		<tr>
+            <td>
+                {%for key, value in frequency_list1.items() %}
+                    <h4> {{ key }} </h4>
+                {%endfor%}
+			</td>
+            <td>
+                {%for key, value in frequency_list1.items() %}
+                    <h4> {{ value }} </h4>
+                {%endfor%}
+            </td>
+		</tr>
+	</table>
+
+    <h4> Palabras del dataset 2 con su frecuencia: </h4>
+        <table>
+            <tr>
+                <td>
+                    {%for key, value in frequency_list2.items() %}
+                        <h4> {{ key }} </h4>
+                    {%endfor%}
+                </td>
+                <td>
+                    {%for key, value in frequency_list2.items() %}
+                        <h4> {{ value }} </h4>
+                    {%endfor%}
+                </td>
+            </tr>
+        </table>
+</body>
+</html>
